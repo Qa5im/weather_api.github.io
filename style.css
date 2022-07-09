@@ -42,6 +42,16 @@ body
     margin-bottom:10%;
     color:white;
 }
+.main_box_detials
+{
+    display: none;
+}
+
+#error_catcher
+{
+    display: none;
+}
+
 .btn_main_box
 {
     background: #7c7c7c2b;
