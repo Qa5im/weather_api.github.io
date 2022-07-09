@@ -1,0 +1,85 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+body
+    
+{
+    width: 100wh;
+    font-family: 'roboto', 'sans serif';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-color: azure;
+    /* overflow: hidden; */
+}
+#main_box
+{
+    background: #000000d0;
+    color:white;
+    padding: 2em;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#input_main_box
+{
+    outline: none;
+    border:none;
+    background: #7c7c7c2b;
+    padding: 0.7em;
+    border-radius: 20px;
+    width: 85%;
+    margin-bottom:10%;
+    color:white;
+}
+.btn_main_box
+{
+    background: #7c7c7c2b;
+    border: none;
+    outline: none;
+    padding: 0.7em;
+    border-radius: 25px;
+    color: white;
+}
+
+.details_city
+{
+    font-size: 1.5em;
+    margin-bottom: 5%;
+}
+.details_temp
+{
+    font-size: xx-large;
+    margin-bottom: 5%;
+
+}
+.details_sup
+{
+    font-weight: 300;
+}
+
+.sup_weather
+{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+

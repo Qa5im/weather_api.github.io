@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2723f43300.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Weather API</title>
+</head>
+<body>
+    <div class="main_box" id="main_box">
+        <div class="main_box_search_box" id="main_box_search_box">
+            <input class="input_main_box"  id="input_main_box" type="text" placeholder="Search" >
+            <button  class="btn_main_box"  id="btn_main_box" ><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="main_box_detials" id="main_box_details">
+            <div class="details_city">Weather in Lahore</div>
+            <div class="details_temp" id="details_temp">23&#176;C</div>
+            <div class="details_sup" id="details_sup">
+                <div class="sup_weather" id="sup_weather">
+                    <img src="https://openweathermap.org/img/wn/04n.png" alt=""  id="sup_icon" class="icon" />
+                    <div class="sup_description"> Cloudy</div>
+                    
+                </div>
+                <div class="sup_hummidity" id="sup_hummidity">Humidity: 44%</div>
+                <div class="sup_windspeed" id="sup_windspeed">Wind speed: 50km/h</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="nodes.js"></script>
+</body>
