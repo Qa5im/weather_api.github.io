@@ -17,7 +17,7 @@
         fetch(url).then((res)=> res.json())
         .then( (data)=> 
         {
-            let weather= data.weather[0].main
+            let weather= data.weather[0].description
             let city= data.name
             document.body.style.backgroundImage= "url('https://source.unsplash.com/1600x900/?" + weather+"' )";       
             details_city_el[0].innerText= `Weather in ${data.name}` 
