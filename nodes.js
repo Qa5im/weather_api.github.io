@@ -11,15 +11,30 @@
         const sup_humidity_el= $(".sup_hummidity")
         const sup_windspeed_el= $(".sup_windspeed")
         const main_box_details_el= document.getElementsByClassName("main_box_detials")
-        const error_catcher_el= document.getElementById("error_catcher")
-
+        // const error_catcher_el= document.getElementById("error_catcher")
         let url= `https://api.openweathermap.org/data/2.5/weather?q=${input_el}&units=metric&appid=e7b490c1d9eb32f3d44b7496e9feb478`
         fetch(url).then((res)=> res.json())
         .then( (data)=> 
         {
+            // error_catcher_el.style.display="none";
             let weather= data.weather[0].description
             let city= data.name
-            document.body.style.backgroundImage= "url('https://source.unsplash.com/1600x900/?" + weather+"' )";       
+            if (screen.width >540 && screen.width <920)
+            {
+                console.log("here")
+                document.body.style.backgroundImage= "url('https://source.unsplash.com/700x900/?" + city+"' )";
+            }
+            else if (screen.width > 540)
+            {
+                document.body.style.backgroundImage= "url('https://source.unsplash.com/1600x900/?" + city+"' )";       
+            }
+           
+            else
+            {
+                console.log("here3")
+                document.body.style.backgroundImage= "url('https://source.unsplash.com/300x800/?" + weather+"' )";       
+            }
+            
             details_city_el[0].innerText= `Weather in ${data.name}` 
             details_temp_el[0].innerText= Math.round(data.main.temp) +"°C"
             sup_icon_el.attr('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` )       
@@ -27,11 +42,12 @@
             sup_humidity_el[0].innerText= "Humidity: "+ data.main.humidity
             sup_windspeed_el[0].innerText= "Wind speed: " + data.wind.speed+ "km/h"
             main_box_details_el[0].style.display="block";
-            error_catcher_el.style.display="none";
+
+            
         })
         .catch
         {
-            error_catcher_el.style.display="block";
+            // error_catcher_el.style.display="block";
             main_box_details_el[0].style.display="none";
         }
 
