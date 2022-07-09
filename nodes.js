@@ -19,7 +19,7 @@
         {
             let weather= data.weather[0].main
             let city= data.name
-            document.body.style.backgroundImage= "url('https://source.unsplash.com/1600x900/?" + city+" "+ weather+"' )";       
+            document.body.style.backgroundImage= "url('https://source.unsplash.com/1600x900/?" + weather+"' )";       
             details_city_el[0].innerText= `Weather in ${data.name}` 
             details_temp_el[0].innerText= Math.round(data.main.temp) +"°C"
             sup_icon_el.attr('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}.png` )       
